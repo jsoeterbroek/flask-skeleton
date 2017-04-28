@@ -1,9 +1,9 @@
-# project/server/models.py
+# project/models.py
 
 
 import datetime
 
-from project.server import app, db, bcrypt
+from project import app, db, bcrypt
 
 
 class User(db.Model):

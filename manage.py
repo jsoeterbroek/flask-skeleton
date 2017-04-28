@@ -13,14 +13,14 @@ COV = coverage.coverage(
     include='project/*',
     omit=[
         'project/tests/*',
-        'project/server/config.py',
-        'project/server/*/__init__.py'
+        'project/config.py',
+        'project/*/__init__.py'
     ]
 )
 COV.start()
 
-from project.server import app, db
-from project.server.models import User
+from project import app, db
+from project.models import User
 
 
 migrate = Migrate(app, db)
